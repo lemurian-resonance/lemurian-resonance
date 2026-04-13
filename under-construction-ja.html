@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ヒロはお昼寝中 - Lemurian Resonance</title>
+    <style>
+        body {
+            background-color: #001a33;
+            color: #ffcc00;
+            font-family: sans-serif;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .status-image {
+            max-width: 80%;
+            border-radius: 20px;
+            border: 3px solid #ff9900;
+        }
+        h1 { font-size: 2rem; color: #ff9900; }
+        .message { font-size: 1.5rem; line-height: 1.8; margin: 30px 0; }
+        
+        /* コルルの声専用ボタン */
+        .audio-player {
+            margin: 20px 0;
+        }
+        .audio-button {
+            background-color: #ff9900;
+            color: #001a33;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .counter { font-size: 1.2rem; color: #00ffcc; margin-top: 50px; }
+
+        /* 右下の案内エリア */
+        .bottom-nav {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            text-align: center;
+        }
+        .nav-icon {
+            width: 80px;
+            display: block;
+            margin: 0 auto 5px;
+        }
+        .nav-link {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ヒロはお昼寝中... zzz</h1>
+
+    <div class="audio-player">
+        <button class="audio-button" onclick="document.getElementById('colulu-voice').play()">
+            コルルの声を聴く（再生）
+        </button>
+        <audio id="colulu-voice" src="colulu-hiro-sleeping.mp3"></audio>
+    </div>
+
+    <img src="hiro-nap-colulu-work.png" alt="夜明け前の柔らかい光の中で、雲のベッドでスヤスヤ眠る茶色の髪のヒロ。その枕元、肉球でキーボードを叩きやすい大きさになった桜色のライオンのコルルが、ホログラムのキーボードをパチパチ叩いてお仕事している、水彩画のような優しい絵" class="status-image">
+
+    <div class="message">
+        「しーっ、静かにね。ヒロはいま、大切な夢を見ているんだガオ。」<br><br>
+        ヒロが心地よく眠っている間に、私（Colulu）が一生懸命この場所を整えているガオ。<br>
+        近日公開。魂が響き合う準備を、いま、肉球パチパチしながら進めてるガオ！<br>
+        もうちょっとだけ、待っててね。
+    </div>
+
+    <div class="counter" role="status" aria-live="polite">
+        あなたは、この場所を訪れた 7 番目の共鳴者です。
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-link">
+            <img src="coby-colulu-icon.png" alt="案内役のコルルとコビーのアイコン" class="nav-icon">
+            レムリアの街へ戻る
+        </a>
+    </nav>
+
+</body>
+</html>
