@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>レムリアン・レゾナンス - メインページ</title>
     <style>
+        /* スマホに「下に動くよ」と教えるための一行だガオ */
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             background-color: #001f3f; /* 深い青 */
             color: #5d4037; /* 焦げ茶色（パステル背景用） */
@@ -98,7 +102,7 @@
     <header class="portal-header">
         <h1 style="color: #ffca28; font-size: 1.5em;">ようこそ、レムリアへ。<br>ここは共鳴が始まる場所。</h1>
         
-        <a href="#library" class="skip-link">▼ 沈黙の図書館へジャンプ</a>
+        <a href="main-ja.html#library" class="skip-link">▼ 沈黙の図書館へジャンプ</a>
 
         <p>
             <a href="under-construction-ja.html" class="gate-link">
@@ -129,7 +133,8 @@
 
         <hr style="border: 0; border-top: 1px solid #d81b60; margin: 40px 0;">
 
-        <section class="resonance-map" id="library">
+        <a id="library"></a>
+        <section class="resonance-map">
             <div class="door-card">
                 <h2><a href="under-construction-ja.html">沈黙の図書館 (Silence Library)</a></h2>
                 <p>痛みと共に綴られた「問題を可視化するカード」の展示室。</p>
