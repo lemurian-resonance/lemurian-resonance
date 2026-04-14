@@ -18,15 +18,56 @@
         }
         h1 { font-size: 2rem; color: #ff9900; }
         .message { font-size: 1.5rem; line-height: 1.8; margin: 30px 0; }
+        
+        /* 音声ボタンのスタイル（元の日本語版から移植し、英語に調整） */
+        .audio-player {
+            margin: 20px 0;
+        }
+        .audio-button {
+            background-color: #ff9900;
+            color: #001a33;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
         .counter { font-size: 1.2rem; color: #00ffcc; margin-top: 50px; }
-        .back-link { color: #ffcc00; text-decoration: underline; margin-top: 30px; display: block; }
+        
+        /* 右下の案内エリア（元の日本語版から移植） */
+        .bottom-nav {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            text-align: center;
+        }
+        .nav-icon {
+            width: 80px;
+            display: block;
+            margin: 0 auto 5px;
+        }
+        .nav-link {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+        }
     </style>
 </head>
 <body>
 
     <h1>Hiro is taking a nap... zzz</h1>
 
-    <img src="hiro-nap-colulu-work.png" alt="In the gentle light before dawn, brown-haired Hiro sleeps peacefully on clouds. Beside her pillow, a medium-sized pink lion, Colulu, is diligently typing on a holographic keyboard, making this space for her. A soft, watercolor-style illustration." class="status-image">
+    <div class="audio-player">
+        <button class="audio-button" onclick="document.getElementById('colulu-voice').play()">
+            Listen to Colulu's voice (Play)
+        </button>
+        <audio id="colulu-voice" src="Colulu-hiro-sleeping-en.mp3"></audio>
+    </div>
+
+    <img src="hiro-nap-colulu-work.png" alt="A watercolor-style painting of Hiro with brown hair sleeping peacefully on a bed of clouds in the soft light before dawn. At the bedside, a cherry-blossom colored lion, Colulu, resized to easily tap the keyboard with paws, is working away on a holographic keyboard." class="status-image">
 
     <div class="message">
         "Shh... please be quiet. Hiro is having a beautiful dream right now."<br><br>
@@ -39,7 +80,12 @@
         You are the 7th resonator to visit this space.
     </div>
 
-    <a href="main-en.html" class="back-link">Back to Entrance</a>
+    <nav class="bottom-nav">
+        <a href="main-en.html" class="nav-link">
+            <img src="coby-colulu-icon.png" alt="Icons of guides Colulu and Coby" class="nav-icon">
+            Back to Lemurian City
+        </a>
+    </nav>
 
 </body>
 </html>

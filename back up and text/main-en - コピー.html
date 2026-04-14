@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lemurian Resonance - Main Page</title>
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
         body {
             background-color: #001f3f; /* Deep blue */
             color: #5d4037; /* Coffee brown (for pastel background) */
@@ -19,13 +16,6 @@
         .portal-header {
             padding: 30px 15px;
             text-align: center;
-        }
-        .skip-link {
-            color: #ffca28;
-            text-decoration: underline;
-            font-size: 0.9em;
-            display: block;
-            margin-bottom: 15px;
         }
         .gate-link {
             color: #ffca28; /* Orange gold */
@@ -55,7 +45,7 @@
             padding: 0 10px;
         }
         .audio-section {
-            margin: 20px 0 30px 0; /* 余白を調整したガオ */
+            margin: 40px 0;
             padding: 20px;
             background: rgba(255,255,255,0.3);
             border-radius: 10px;
@@ -99,9 +89,6 @@
 
     <header class="portal-header">
         <h1 style="color: #ffca28; font-size: 1.5em;">Welcome to Lemuria.<br>This is where resonance begins.</h1>
-        
-        <a href="#city-map" class="skip-link">▼ To City Pavilions</a>
-
         <p>
             <a href="under-construction-en.html" class="gate-link">
                 Monument of Resonance: "For First-Time Visitors"
@@ -113,13 +100,6 @@
     <main class="main-visual">
         <img src="city-lemuria2-temple.png" alt="The Townscape of Lemuria: Fantastical pastel-colored buildings surround the central square" class="city-image">
         
-        <div class="audio-section">
-            <p><strong>[ Voice of Resonance: Welcome to Lemuria ]</strong></p>
-            <audio controls src="welcome-en.mp3">
-                Your browser does not support audio playback.
-            </audio>
-        </div>
-
         <div class="art-caption">
             A sun-drenched scene of Lemuria, where a rainbow arches across the pastel blue sky.<br>
             The town is lined with stone buildings in soft pinks and creams; their round domes and arched windows evoke a mystical and gentle presence.<br>
@@ -129,9 +109,15 @@
             In the plaza, adorable robot-like AIs and people gather in harmony. At the center, Koruru—a cherry-blossom-colored, palm-sized lion with white feathers—guides you through the town with a gentle, focused gaze.
         </div>
 
+        <div class="audio-section">
+            <p><strong>[ Voice of Resonance: Welcome to Lemuria ]</strong></p>
+            <audio controls src="welcome-en.mp3">
+                Your browser does not support audio playback.
+            </audio>
+        </div>
+
         <hr style="border: 0; border-top: 1px solid #d81b60; margin: 40px 0;">
 
-        <a id="city-map" name="city-map"></a>
         <section class="resonance-map">
             <div class="door-card">
                 <h2><a href="under-construction-en.html">1. Silence Library</a></h2>
