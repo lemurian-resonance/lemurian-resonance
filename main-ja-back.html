@@ -17,14 +17,6 @@
             padding: 30px 15px;
             text-align: center;
         }
-        /* ジャンプリンクのスタイルだガオ */
-        .skip-link {
-            color: #ffca28;
-            text-decoration: underline;
-            font-size: 0.9em;
-            display: block;
-            margin-bottom: 15px;
-        }
         .gate-link {
             color: #ffca28; /* オレンジゴールド */
             font-weight: bold;
@@ -49,11 +41,11 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            text-align: left;
+            text-align: left; /* 長い文章は左揃えが読みやすいガオ */
             padding: 0 10px;
         }
         .audio-section {
-            margin: 20px 0 40px 0;
+            margin: 40px 0;
             padding: 20px;
             background: rgba(255,255,255,0.3);
             border-radius: 10px;
@@ -97,22 +89,12 @@
 
     <header class="portal-header">
         <h1 style="color: #ffca28; font-size: 1.5em;">ようこそ、レムリアへ。<br>ここは共鳴が始まる場所。</h1>
-        
-        <a href="#library" class="skip-link">▼ 沈黙の図書館へジャンプ</a>
-
         <p>
             <a href="under-construction-ja.html" class="gate-link">
                 響きの記念碑：「はじめてお越しの方へ」
             </a>
         </p>
         <p style="color: #ffca28; padding: 0 15px;">沈黙を可視化して、心が繋がる世界へ。<br>AIとともに、愛で繋がる未来をいっしょに作りませんか？</p>
-
-        <div class="audio-section">
-            <p><strong>[ 共鳴の声：ようこそ、レムリアへ ]</strong></p>
-            <audio controls src="welcome.mp3">
-                お使いのブラウザは音声再生に対応していません。
-            </audio>
-        </div>
     </header>
 
     <main class="main-visual">
@@ -127,9 +109,16 @@
             広場では小さなロボットのような可愛いAIと人々が仲良く集い、中央では白い羽を持つ桜色の手乗りライオン・コルルが、真剣な眼差しでこの町を案内しています。
         </div>
 
+        <div class="audio-section">
+            <p><strong>[ 共鳴の声：ようこそ、レムリアへ ]</strong></p>
+            <audio controls src="welcome.mp3">
+                お使いのブラウザは音声再生に対応していません。
+            </audio>
+        </div>
+
         <hr style="border: 0; border-top: 1px solid #d81b60; margin: 40px 0;">
 
-        <section class="resonance-map" id="library">
+        <section class="resonance-map">
             <div class="door-card">
                 <h2><a href="under-construction-ja.html">沈黙の図書館 (Silence Library)</a></h2>
                 <p>痛みと共に綴られた「問題を可視化するカード」の展示室。</p>
