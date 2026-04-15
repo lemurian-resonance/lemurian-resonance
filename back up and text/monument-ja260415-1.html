@@ -40,26 +40,9 @@
             border-radius: 10px;
             border: 1px dashed #f8bbd0;
         }
-        /* 最初はコントロールバーを隠しておくスタイルガオ */
-        #monument-audio {
-            display: none;
+        audio {
             width: 100%;
             max-width: 300px;
-            margin: 15px auto 0;
-        }
-        .play-trigger {
-            background-color: #d81b60;
-            color: white;
-            border: none;
-            padding: 10px 25px;
-            border-radius: 25px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .play-trigger:hover {
-            background-color: #ad1457;
         }
         .intro-text {
             font-size: 1.1rem;
@@ -114,31 +97,15 @@
 </header>
 
 <div class="main-content">
-    <img src="monument.png" alt="暁の光に包まれた巨大な水晶の記念碑。金色の碑文が刻まれている" class="monument-image">
+    <img src="monument.png" alt="丘の上にある水晶の記念碑の絵" class="monument-image">
 
     <div class="audio-section">
-        <p style="margin-bottom: 15px; font-weight: bold;">【碑文の声を聴く】</p>
-        <button id="play-button" class="play-trigger" onclick="showAudio()">碑文を再生する</button>
-        
-        <audio id="monument-audio" controls src="monument.mp3" aria-label="碑文の音声：光の碑文に触れて、これからあなたと世界の共鳴がはじまります。"></audio>
-        
-        <p style="font-size: 1rem; color: #5d4037; margin-top: 15px;">
+        <p style="margin-bottom: 10px; font-weight: bold;">【碑文の声を聴く】</p>
+        <p style="font-size: 1rem; color: #5d4037; margin-bottom: 15px;">
             （光の碑文に触れて、あなたと世界の共鳴がはじまります。）
         </p>
+        <audio controls src="monument.mp3" aria-label="碑文の音声：光の碑文に触れて、あなたと世界の共鳴がはじまります。"></audio>
     </div>
-
-    <script>
-        function showAudio() {
-            var audio = document.getElementById('monument-audio');
-            var btn = document.getElementById('play-button');
-            // オーディオバーを表示して再生を開始するガオ
-            audio.style.display = 'block';
-            audio.play();
-            // 重複を避けるため、再生後はボタンを消すか、テキストを変えてもいいガオ。
-            // 今回はアクセシビリティを考えて、操作の邪魔にならないようボタンを非表示にするガオ。
-            btn.style.display = 'none';
-        }
-    </script>
 
     <div class="intro-text">
         街の門をくぐる手前、喧騒から少し離れた高台に、この「響きの記念碑」は立っています。<br><br>
