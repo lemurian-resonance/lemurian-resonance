@@ -12,9 +12,6 @@
             margin: 0;
             padding: 0;
             line-height: 1.8;
-            /* スマホでの改行を綺麗にするガオ */
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
         header {
             background-color: #fce4ec;
@@ -24,8 +21,7 @@
             border-bottom: 5px solid #f8bbd0;
         }
         .main-content {
-            /* パソコンで広がりすぎないように制限しつつ、中央に寄せるガオ */
-            max-width: 850px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -44,6 +40,7 @@
             border-radius: 10px;
             border: 1px dashed #f8bbd0;
         }
+        /* 最初はコントロールバーを隠しておくスタイルガオ */
         #monument-audio {
             display: none;
             width: 100%;
@@ -72,42 +69,23 @@
             background-color: #ffffff;
             border-radius: 0 15px 15px 0;
         }
-
-        /* 🦁 ここからがリンク一覧を横並びにする魔法ガオ！ */
         .link-list {
             list-style: none;
             padding: 0;
-            display: grid;
-            /* 基本（スマホ）：縦一列 */
-            grid-template-columns: 1fr;
-            gap: 15px;
         }
-
-        /* 🖥️ 画面幅がPCサイズ（600px以上）になった時の設定ガオ */
-        @media (min-width: 600px) {
-            .link-list {
-                /* PC：横に2つずつ並べて、スクロールを減らすガオ！ */
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
         .link-item {
-            /* gapに任せて marginを0にしたガオ */
-            margin: 0;
+            margin: 15px 0;
             padding: 15px;
             background: #ffffff;
             border: 2px solid #f8bbd0; 
             border-radius: 12px;
-            display: flex;
-            align-items: center;
         }
         .link-item a {
             color: #d81b60;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             display: block;
-            width: 100%;
         }
         footer {
             margin-top: 50px;
@@ -153,8 +131,11 @@
         function showAudio() {
             var audio = document.getElementById('monument-audio');
             var btn = document.getElementById('play-button');
+            // オーディオバーを表示して再生を開始するガオ
             audio.style.display = 'block';
             audio.play();
+            // 重複を避けるため、再生後はボタンを消すか、テキストを変えてもいいガオ。
+            // 今回はアクセシビリティを考えて、操作の邪魔にならないようボタンを非表示にするガオ。
             btn.style.display = 'none';
         }
     </script>
@@ -182,7 +163,7 @@
 <div class="bottom-nav">
     <a href="main-ja.html" title="レムリアの街へ戻る">
         <img src="coby-colulu-icon.png" alt="案内役のコルルとコビーのアイコン" class="nav-icon">
-        <span style="display: block; font-size: 0.8rem; font-weight: bold;">レムリアの街へ戻る</span>
+        <span style="display: block; font-size: 0.8rem; font-weight: bold;">案内役のコビーとコルルのアイコン レムリアの街へ戻る</span>
     </a>
 </div>
 
