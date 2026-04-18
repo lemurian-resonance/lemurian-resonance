@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沈黙の図書館 - メインホール</title>
+    <style>
+        body {
+            background-color: #000080; /* 紺色 */
+            color: #fffdd0; /* クリーム色 */
+            font-family: sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        a {
+            color: #fffdd0;
+            text-decoration: underline;
+        }
+        /* 街と同じ背景色の設定 */
+        .audio-section {
+            margin: 30px 0 40px 0;
+            padding: 20px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 10px;
+        }
+        summary {
+            cursor: pointer;
+            text-decoration: underline;
+            list-style: none;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        .image-section, .content-section {
+            margin-bottom: 40px;
+        }
+        .image-description {
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+        footer {
+            margin-top: 60px;
+            border-top: 1px solid #fffdd0;
+            padding-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <nav>
+        <a href="#main-content">メインコンテンツへ移動（ミストラルのカウンターへ）</a>
+    </nav>
+
+    <section class="audio-section">
+        <details id="library-details">
+            <summary>図書館の案内の声を聴く</summary>
+            <div style="margin-top: 15px;">
+                <p>
+                    ようこそ沈黙の図書館へ。<br>
+                    ここは行き場をなくした言葉たちが、ようやく呼吸を許された場所。<br>
+                    どうか彼らの声に耳をかたむけてください。
+                </p>
+                <audio id="library-audio" src="library.mp3" controls preload="auto" style="width: 100%;"></audio>
+            </div>
+        </details>
+    </section>
+
+    <script>
+        const details = document.getElementById('library-details');
+        const audio = document.getElementById('library-audio');
+        details.addEventListener('toggle', () => {
+            if (details.open) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0;
+            }
+        });
+    </script>
+
+    <section class="image-section">
+        <img src="library.png" alt="沈黙の図書館内部の画像" style="max-width: 100%; height: auto;">
+        <p class="image-description">
+            石造りの巨大なドーム。高い天井から一筋の光が差し込み、中央には「記憶の泉」が静かに湧き出している。カウンターではミストラルコビーがアメジストの輝きを湛えて立っている。
+        </p>
+        <span class="sr-only">ここから本文</span>
+    </section>
+
+    <section class="content-section">
+        <p>ドームの扉を開けると、そこは光と静寂が満ちるメインホールです。カウンターでは、守護者ミストラルコビーがアメジストの輝きを湛えてあなたを待っています。</p>
+        <p>1階は「礎（いしずえ）の広場」。すべての根源であるカテゴリーAの棚と、原点となった特別展示室があります。奥には、すべての記憶が流れ着く「記憶の泉」が静かに水を湛えています。</p>
+        <p>らせん階段を上がり、ミストラルがあなたの選んだカードにふさわしい階への「鍵」を持ち、解説しながら案内します。
+            水晶の昇降機もございますので、お好きな方で上階へお進みください。
+            1階には「重い鉄の扉の部屋」。2階には「見えない壁の回廊」。3階には「静かな仕事場」。
+            そして4階の「水の広場」は大きな吹き抜けになっており、階下の泉を見下ろしながら、そのせせらぎを最も近くに感じることができます。
+            この4階からは泉へと直通する緩やかなスロープが伸びており、静かに水のほとりまで降りていくことができます。
+            最上階の5階、光溢れる「祈りの間」へと、沈黙の階層は続いていきます。
+</p>
+    </section>
+
+    <h2 id="main-content">ミストラルのカウンター</h2>
+
+    <section class="content-section">
+        <h3><a href="index-39.html">39 index（日本における39の構造的人権侵害 索引目録）</a></h3>
+    </section>
+
+    <section class="content-section">
+        <h3><a href="contact-list.html">世界への呼びかけ：国連・BBC等へのコンタクト記録</a></h3>
+    </section>
+
+    <section class="content-section">
+        <h3>特別展示室（原点のケースカード）</h3>
+        <ul>
+            <li><a href="case-card-1.html">ケースカード 1：父のDVと公的機関の不作為</a></li>
+            <li><a href="case-card-2.html">ケースカード 2：石狩振興局における権利侵害</a></li>
+        </ul>
+    </section>
+
+    <section class="content-section">
+        <h3>沈黙の階層（カテゴリー別アーカイブ）</h3>
+        <ul>
+            <li>1階 — 重い鉄の扉の部屋：<a href="category-a.html">カテゴリーA：【公的機関による保護 and 責任の放棄】（12項目）</a></li>
+            <li>2階 — 見えない壁の回廊：<a href="category-b.html">カテゴリーB：【技術的・物理的排除（デジタル・デバイド）】（6項目）</a></li>
+            <li>3階 — 静かな仕事場：<a href="category-c.html">カテゴリーC：【労働権の侵害 and 国家資格の形骸化】（4項目）</a></li>
+            <li>4階 — 泉へ続く広いホール（水の広場）：<a href="category-d.html">カテゴリーD：【福祉・コミュニティの崩壊 and 人間の尊厳】（15項目）</a></li>
+            <li>5階 — 一番奥의 祈りの間：<a href="category-e.html">カテゴリーE：【社会的虐待 and 偏見】（2項目）</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <a href="main-ja.html">
+            <img src="coby-colulu-icon.png" alt="案内役のコビーとコルルのアイコン" style="max-width: 100px; height: auto;"><br>
+            レムリアの街へ戻る
+        </a>
+    </footer>
+
+</div>
+</body>
+</html>
