@@ -6,7 +6,18 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
-        body { background-color: #f4f7f9; color: #1a1a1a; font-family: sans-serif; line-height: 1.8; margin: 0; padding: 0; }
+body {
+    /* レムリアのオーロラ・グラデーション 
+       淡いパステルブルー、ラベンダー、ミントが優しく混ざり合います
+    */
+    background: linear-gradient(135deg, #eef6ff 0%, #f3eaff 50%, #eafff3 100%);
+    background-attachment: fixed; /* スクロールしても背景が動かない設定ガオ */
+    color: #1a1a1a;
+    font-family: sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+}
         header { text-align: center; background: #fff; padding: 30px 10px; border-bottom: 3px solid #2a5d84; }
         img#main-visual { max-width: 100%; height: auto; border-radius: 5px; }
         main { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
@@ -27,6 +38,15 @@
         th { background: #eee; width: 30%; }
         footer { background: #2a5d84; color: #fff; padding: 40px 20px; text-align: center; margin-top: 50px; }
         .footer-info { font-size: 1rem; margin-bottom: 10px; }
+.custom-gate-icon {
+    width: 2.5rem;      /* 24pxから変更ガオ */
+    height: 2.5rem;     /* 24pxから変更ガオ */
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 20px; /* 8pxから変更ガオ */
+    border-radius: 8px;
+    padding-top: 4px; /* ← この一行を書き足してガオ！ */
+}
     </style>
 </head>
 <body>
@@ -65,7 +85,7 @@
 
     <section class="gate">
         <details>
-            <summary><span class="gate-icon" aria-hidden="true">vpn_key</span>1. 申請・手続き・税金の窓口</summary>
+            <summary><img class="custom-gate-icon" src="01-rainbow-pen-icon.png" aria-hidden="true">1. 申請・手続き・税金の窓口</summary>
             <div class="content-box">
                 <ul>
                     <li><a href="https://www.pref.hokkaido.lg.jp/category/d002/c005/">各種申請・助成制度</a></li>
@@ -81,7 +101,7 @@
 
     <section class="gate">
         <details>
-            <summary><span class="gate-icon" aria-hidden="true">volunteer_activism</span>2. 健康・医療・福祉の窓口</summary>
+            <summary><img class="custom-gate-icon" src="02-healing-shizuku-icon.png" aria-hidden="true">2. 健康・医療・福祉の窓口</summary>
             <div class="content-box">
                 <ul>
                     <li><a href="https://www.pref.hokkaido.lg.jp/hf/shf/index.html">障がい者福祉支援</a></li>
