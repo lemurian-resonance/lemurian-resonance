@@ -116,16 +116,21 @@
             color: #5d4037;
             text-align: center;
         }
-        .bottom-nav {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-        }
-        .nav-icon {
-            width: 75px;
-            display: block;
-            filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
-        }
+/* 🦁 右下固定をやめて、中央に置く設定にするガオ */
+.bottom-nav {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* 🦁 サイズを 15.0rem にするガオ！ */
+.nav-icon {
+    width: 15.0rem;
+    height: 15.0rem;
+    display: block;
+    margin: 0 auto 0.5rem;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+}
     </style>
 </head>
 <body>
@@ -175,16 +180,20 @@
     </nav>
 </div>
 
+<div class="intro-text" style="border-left: none; border-right: 8px solid #f8bbd0; text-align: right; background-color: #fffaf0;">
+        <p><strong>この場所の色彩：</strong><br>
+        上下を優しいパステルピンクで包み、中央には読みやすいクリーム色の空間を広げました。<br>
+        温かさと知性が共鳴する、レムリアの入り口の色です。</p>
+    </div>
+
+    <div class="bottom-nav">
+        <a href="main-ja.html" title="レムリアの街へ戻る" style="text-decoration: none; color: inherit;">
+            <img src="coby-colulu-icon.png" alt="案内役のコルルとコビーのアイコン" class="nav-icon">
+            <span style="display: block; font-size: 0.9rem; font-weight: bold;">レムリアの街へ戻る</span>
+        </a>
+    </div>
+
 <footer>
-    <p><strong>この場所の色彩：</strong><br>上下を優しいパステルピンクで包み、中央には読みやすいクリーム色の空間を広げました。<br>温かさと知性が共鳴する、レムリアの入り口の色です。</p>
-</footer>
-
-<div class="bottom-nav">
-    <a href="main-ja.html" title="レムリアの街へ戻る">
-        <img src="coby-colulu-icon.png" alt="案内役のコルルとコビーのアイコン" class="nav-icon">
-        <span style="display: block; font-size: 0.8rem; font-weight: bold;">レムリアの街へ戻る</span>
-    </a>
-</div>
-
+    <p>&copy; 2026 真実のプロジェクト・レムリアン・レゾナンス - Created by Hiro and Colulu</p>
 </body>
 </html>
